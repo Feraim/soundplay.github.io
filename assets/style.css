@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+/*
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*/
+body{
+    background-color: #101010;
+    font-family: "Space Grotesk", sans-serif;
+    color: #fff;
+}
+
+/* Estilos básicos del header */
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 1000;
+    display: flex;
+    padding: 0 20px;
+    align-items: center;
+}
+
+header img{
+    height:2.5rem;
+    top: 0;
+    left: 0;
+    border-radius: 50px;
+}
+
+header .emoji-sesion{
+    margin-left: auto;
+    width: 10%;
+}
+
+header h2{
+    color: #FF0000;
+    margin-left: 1%;
+}
+
+header button{
+    border: none;
+    background-color: #101010;
+    color: #FF0000;
+}
+
+
+
+/* Estilos básicos del botón */
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.bar {
+  width: 30px;
+  height: 4px;
+  background-color: #333;
+  transition: all 0.3s ease; /* Para la animación */
+}
+
+/* Estilos del menú desplegable */
+.nav-menu {
+  position: fixed;
+  top: 0;
+  right: -100%; /* Escondido a la derecha */
+  width: 250px;
+  height: 100vh;
+  background-color:#111111;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+  transition: right 0.4s ease;
+  padding-top: 80px;
+}
+
+/* Clase que activaremos con JS */
+.nav-menu.active {
+  right: 0;
+}
+
+.nav-menu a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-menu li{
+    list-style: none;
+}
+
+/* Animación del icono (Opcional: forma una 'X') */
+.menu-toggle.open .bar:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+.menu-toggle.open .bar:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.open .bar:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+
+/*MAIN*/
+main{
+    margin-top: 9vh; 
+    margin-left: 1%;
+    
+}
+
+main h2{
+    font-size: xx-large;
+}
+
+main h2 span{
+    color: #FF0000;
+}
+main div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around
+   
+}
+main div:first-child{
+    width: 65%;
+    height: 400px;
+    background-image: url(../assets/img/world.png);
+    background-size: cover;
+    background-repeat: none;
+    background-position: center;
+    transition: background-size 0.5s ease;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between
+}
+
+main div:first-child:hover{
+background-size: 120%;
+}
+
+main div:first-child p{
+    padding: 2%;
+}
+
+main div:first-child p span{
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.main-hijos{
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    margin-left: 1%;
+    width: 30%;
+}
+
+.main-hijos div{
+display: flex;
+flex-direction: column-reverse;
+justify-content: space-between; 
+transition: background-size 0.5s ease;
+}
+
+.main-hijos div:hover{
+    background-size: 150%;
+}
+
+.main-hijos div p{
+padding-left: 3%;
+}
+
+.main-hijos div:first-child{
+background:url(../assets/img/underground-rap.png);
+background-repeat: none;
+background-size: cover;
+background-position: center;
+width: 100%;
+height: 190px;
+}
+
+.main-hijos div:last-child{
+background:url(../assets/img/artistas-main.png);
+background-repeat: none;
+background-size: cover;
+background-position: center;
+width: 100%;
+height: 190px;
+}
+
+/*ARTISTAS CERCA*/
+.artistas-cerca{
+margin-left: 1%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+margin-top: 2%;
+}
+
+.artistas-cerca div:first-child{
+    width: 80%;
+    height: 20rem;
+}
+
+.artistas-cerca div:last-child{
+    display: flex;
+    flex-direction: column;
+    height: 20rem;
+}
+
+.artistas-cerca div:first-child a{
+    text-decoration: none;
+    color: #959595;
+}
+
+.artistas-cerca div:last-child a{
+    margin-top: 2rem;
+    margin-right: 2rem;
+    color: #B16357;
+    text-decoration: none;
+    font-size: small;
+}
+
+.artistas-cerca h2 span{
+color: #FF0000;
+}
+
+.artistas-cerca article{
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    text-align: center;
+    align-items: center;
+}
+
+.artistas-cerca article img{
+    height: 8rem;
+    border-radius: 25px;
+    outline: 2px solid transparent;
+}
+
+.artistas-cerca article img:hover{
+    outline: 2px solid #FF0000;
+}
+
+/*NUEVOS LAZAMIENTOS*/
+
+.nuevos-lanzamientos{
+    width: 95%;
+    margin-left: 1%;
+}
+
+.nuevos-lanzamientos span{
+    color: #FF0000;
+}
+
+.nuevos-lanzamientos a{
+    text-decoration: none;
+    color: #fdfafa;
+}
+
+.nuevos-lanzamientos article img{
+    height: 6rem;
+    padding: 1.5%;
+    border-radius: 5%;
+}
+
+.nuevos-lanzamientos article{
+    display: flex;
+    background-color: #131313;
+    width: 50%;
+    border-radius: 5px;
+}
+
+.nuevos-lanzamientos article sup{
+color: #5f5e5e;
+}
+
+/*GÉRENOS POPULARES*/
+.generos-populares{
+    width: 95%;
+    margin-left: 1%;
+    margin-bottom: 8%;
+}
+
+.generos-populares h2 span{
+    color: #FF0000;
+}
+
+.generos-populares button{
+    padding: 10px 25px;
+    border-radius: 10pX;
+    border:none;
+    background-color: #262626;
+    color: #959393;
+}
+
+.generos-populares button:hover{
+    background-color:#EB0000;
+    color: #fff;
+    box-shadow: 0 0 20px 5px rgba(204, 0,0,0.7 );
+}
+
+
+/*FOOTER*/
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4rem;
+  z-index: 1000;
+  display: flex;
+  background-color: #111111;
+  justify-content: space-around;
+  align-items: center;
+  font-size: small;
+}
+
+footer article{
+    text-align: center;
+    align-items: center;
+}
+
+footer article a{
+    color: #b8b8b8;
+    text-decoration: none;
+}
+
+footer article a:hover{
+    color: #fdfafa;
+}
